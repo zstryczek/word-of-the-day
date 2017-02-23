@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController
 {
-    
+    var currentDate = String()
     var word = String()
     var definition = String()
     
@@ -18,8 +18,9 @@ class ViewController: UIViewController
     
     override func viewDidLoad()
     {
+        findCurrentDate()
         super.viewDidLoad()
-        let urlString = "http://developer.wordnik.com/v4/words.json"
+        let urlString = "http://api.wordnik.com/v4/words.json/wordOfTheDay?date=\(currentDate)&api_key=a2a73e7b926c924fad7001ca3111acd55af2ffabf50eb4ae5"
         
         //if url is a valid url
         if let url = NSURL(string: urlString)
@@ -45,6 +46,18 @@ class ViewController: UIViewController
         }
         
        wordLabel.text = word
+    }
+    
+    func findCurrentDate()
+    {
+        let date = Date()
+        let formatter = DateFormatter()
+        
+        formatter.dateFormat = "yyyy-MM-dd"
+        
+        let result = formatter.string(from: date)
+        
+        currentDate = result
     }
     
 }
