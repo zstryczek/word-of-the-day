@@ -40,12 +40,8 @@ class ViewController: UIViewController
     {
         
         let word = "word"
-        for result in json ["definitions"].arrayValue
-        {
-            let definition = "text"
-        }
         
-       wordLabel.text = word
+        wordLabel.text = word
     }
     
     func findCurrentDate()
