@@ -14,6 +14,7 @@
 		3FFBEEB01E5DE43C009E4261 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FFBEEAE1E5DE43C009E4261 /* LaunchScreen.storyboard */; };
 		3FFBEEBB1E5DE43C009E4261 /* Word_Of_The_DayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFBEEBA1E5DE43C009E4261 /* Word_Of_The_DayTests.swift */; };
 		3FFBEEC61E5DE43C009E4261 /* Word_Of_The_DayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFBEEC51E5DE43C009E4261 /* Word_Of_The_DayUITests.swift */; };
+		3FFBEED41E5DE4C4009E4261 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFBEED31E5DE4C4009E4261 /* SwiftyJSON.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		3FFBEEC11E5DE43C009E4261 /* Word Of The DayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Word Of The DayUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FFBEEC51E5DE43C009E4261 /* Word_Of_The_DayUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word_Of_The_DayUITests.swift; sourceTree = "<group>"; };
 		3FFBEEC71E5DE43C009E4261 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3FFBEED31E5DE4C4009E4261 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = ../../WhiteHousePetitions/WhiteHousePetitions/SwiftyJSON.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				3FFBEEA51E5DE43C009E4261 /* AppDelegate.swift */,
 				3FFBEEA71E5DE43C009E4261 /* ViewController.swift */,
 				3FFBEEA91E5DE43C009E4261 /* Main.storyboard */,
+				3FFBEED31E5DE4C4009E4261 /* SwiftyJSON.swift */,
 				3FFBEEAC1E5DE43C009E4261 /* Assets.xcassets */,
 				3FFBEEAE1E5DE43C009E4261 /* LaunchScreen.storyboard */,
 				3FFBEEB11E5DE43C009E4261 /* Info.plist */,
@@ -262,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FFBEED41E5DE4C4009E4261 /* SwiftyJSON.swift in Sources */,
 				3FFBEEA81E5DE43C009E4261 /* ViewController.swift in Sources */,
 				3FFBEEA61E5DE43C009E4261 /* AppDelegate.swift in Sources */,
 			);

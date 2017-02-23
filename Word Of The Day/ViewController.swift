@@ -8,18 +8,45 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
-    override func viewDidLoad() {
+class ViewController: UIViewController
+{
+    
+    var word = String()
+    var definition = String()
+    
+    @IBOutlet var wordLabel: UILabel!
+    
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        let urlString = "http://developer.wordnik.com/v4/words.json"
+        
+        //if url is a valid url
+        if let url = NSURL(string: urlString)
+        {
+            if let myData = try? NSData(contentsOf: url as URL, options: [])//try cheks for url connection
+            {
+                let json = JSON(data: myData as Data)//created jason object taking ns data and making it usable withinn jason
+                
+                print("ok to parse")
+                parse(json: json)
+            
+            }
+        }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func parse(json: JSON)
+    {
+        
+        let word = "word"
+        for result in json ["definitions"].arrayValue
+        {
+            let definition = "text"
+        }
+        
+       wordLabel.text = word
     }
-
-
+    
 }
+
 
