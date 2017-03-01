@@ -15,6 +15,7 @@ class ViewController: UIViewController
     var definition = String()
     
     @IBOutlet var wordLabel: UILabel!
+    @IBOutlet weak var definitionLabel: UILabel!
     
     override func viewDidLoad()
     {
@@ -38,10 +39,18 @@ class ViewController: UIViewController
     
     func parse(json: JSON)
     {
+
+        let word = json["word"]
         
-        let word = "word"
+        wordLabel.text = word.stringValue
         
-        wordLabel.text = word
+        for definition in json["definitions"].arrayValue
+        {
+            let definitionText = definition["text"].stringValue
+            
+            definitionLabel.text = (definitionText)
+        }
+     
     }
     
     func findCurrentDate()
