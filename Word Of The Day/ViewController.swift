@@ -11,9 +11,11 @@ import UIKit
 class ViewController: UIViewController
 {
     var currentDate = String()
+    var currentDateLabelText = String()
     var word = String()
     var definition = String()
     
+    @IBOutlet var dateLabel: UILabel!
     @IBOutlet var wordLabel: UILabel!
     @IBOutlet weak var definitionLabel: UILabel!
     @IBOutlet var todaysWordButtonOutlet: UIButton!
@@ -22,6 +24,8 @@ class ViewController: UIViewController
     override func viewDidLoad()
     {
         findCurrentDate()
+        findCurrentDateForLabel()
+        dateLabel.text = "\(currentDateLabelText)"
         super.viewDidLoad()
         let urlString = "http://api.wordnik.com/v4/words.json/wordOfTheDay?date=\(currentDate)&api_key=a2a73e7b926c924fad7001ca3111acd55af2ffabf50eb4ae5"
         
@@ -62,10 +66,26 @@ class ViewController: UIViewController
         
         formatter.dateFormat = "yyyy-MM-dd"
         
+        
         let result = formatter.string(from: date)
         
         currentDate = result
     }
+    
+    func findCurrentDateForLabel()
+    {
+        let date = Date()
+        let formatter = DateFormatter()
+        
+        formatter.dateFormat = "MMMM d yyyy"
+        
+        
+        
+        let result = formatter.string(from: date)
+        
+        currentDateLabelText = result
+    }
+
     
     @IBAction func todaysWordButtonTapped(_ sender: Any) {
         
