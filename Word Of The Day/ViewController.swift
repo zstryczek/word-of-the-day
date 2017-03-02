@@ -16,6 +16,8 @@ class ViewController: UIViewController
     
     @IBOutlet var wordLabel: UILabel!
     @IBOutlet weak var definitionLabel: UILabel!
+    @IBOutlet var todaysWordButtonOutlet: UIButton!
+    @IBOutlet var quizButtonOutlet: UIButton!
     
     override func viewDidLoad()
     {
@@ -65,6 +67,20 @@ class ViewController: UIViewController
         currentDate = result
     }
     
+    @IBAction func todaysWordButtonTapped(_ sender: Any) {
+        
+        todaysWordButtonOutlet.setImage(UIImage(named: "todaysWordTapped"), for: UIControlState.normal)
+        quizButtonOutlet.setImage(UIImage(named: "quiz"), for: UIControlState.normal)
+        
+        
+    }
+    
+    @IBAction func quizButtonTapped(_ sender: Any) {
+        
+        quizButtonOutlet.setImage(UIImage(named: "quizTapped"), for: UIControlState.normal)
+        todaysWordButtonOutlet.setImage(UIImage(named: "todaysWord"), for: UIControlState.normal)
+        
+    }
 }
 
 
